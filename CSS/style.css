@@ -490,8 +490,8 @@ body{
     .case-study-container{
         padding: 2rem 1.5rem;
     }
+    
 }
-
 
 .cs-text img{
     width: 40px;
@@ -548,50 +548,53 @@ body{
 /* case details */
 
 .casedetails-container{
-    position: relative;
     height: 100vh;
-}
-.casestudy-man-img{
-    position:absolute;
-    bottom: 0;
-    left: 50%;
-}
-.button-container{
-    width: 800px;
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    background: url(../images/casestudies-bg.jpg);
+    background-position: center;
+    background-size: cover;
+
 }
 
-.case-details-btn{
-    border: .9px solid #48ee07;
+.button-container{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;    
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+ .case-details-btn{
+
+     border: .9px solid #48ee07;
     outline: none;
     padding: 15px 30px;
     background-color: white;
     color: black;
     font-size: 18px;
-    width: 220px;
+    width: 250px !important;
     font-weight: 600;
     border-radius: 50px;
     margin: 10px;
-    box-shadow: 0 0 20px rgb(228, 225, 225);
-}
-.case-details-btn i{
+    box-shadow: 0 0 20px rgb(228, 225, 225); 
+} 
+ .case-details-btn i{
     color: #6cb808;
     margin-right: 5px;
 }
 
 /* Official Whatspp API */
-.official-container{
-    width: 100%;
-    height: 100vh;
+
+.official-container{   
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    /* background: url(/images/03.png);
-    background-position: center;
-    background-repeat: no-repeat; */
+    padding: 5rem 0;
 }
 .background-banner{
     position: absolute;
@@ -614,6 +617,7 @@ body{
     width: 450px;
     margin-top: 50px;
     line-height: 27px;
+    text-align: justify;
 }
 .official-card-box{
     display: flex;
@@ -637,7 +641,7 @@ body{
     text-align: center;
     border-radius: 30px;
     padding: 50px;
-    margin: 5rem 0;
+    margin: 5rem 7rem;
 }
 .feedback-box i{
     font-size: 45px;
@@ -652,6 +656,12 @@ body{
 .feedback-box h5{
     font-size: 18px;
     font-weight: 600;
+} 
+
+@media screen and (width < 450px) {
+    .feedback-container{
+        width: 350px !important;
+    }
 }
 
 /* Clients */
@@ -690,10 +700,12 @@ footer{
     height: 100px;
     margin-left: 30px;
 }
-.askeva-box p{
+.askeva-text p{
     padding: 20px 30px;
     color: var(--color-3);
     line-height: 28px;
+    width: 100%;
+    text-align: justify;
 }
 .social-head{
     color: #fff;
@@ -731,6 +743,40 @@ footer{
 }
 .quick-links h4{
     padding: 15px 0;
+}
+.mobile-num-box input:focus{
+    border: 1px solid #44e206;
+    border-radius: 5px;
+}
+
+@media screen and (width < 550px) {
+    .casedetails-box img{
+        width: 350px;
+    }
+    
+    .background-banner img{
+        width: 350px !important;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .mobile-num-box{
+        gap: 10px !important;
+        display: flex !important;
+    }
+    .mobile-num-box input{
+        width:100% !important;
+    }
+    #bookdemo-btn{
+        width: 100% !important;
+    }
+    .Copyright{
+        font-size: 13px !important;
+    }
+
 }
 .contact{
     background-color: var(--color-3);
@@ -773,6 +819,10 @@ input::placeholder{
     padding: 30px 0 20px 0;
     font-size: 15px;
     letter-spacing: 1px;
+}
+.heart{
+    color: red;
+    font-size: 1.4rem;
 }
 .india-text{
     color: #48ee07;
